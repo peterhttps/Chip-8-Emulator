@@ -94,6 +94,6 @@ Lastly, I'm grateful for the Rust programming community's support and resources,
 
 ## License
 
-This project is licensed under the MIT License. This license allows you to use, share, modify, and distribute the software as long as you include the original license and copyright notice in your copies. For more detailed information, please see the [LICENSE](LICENSE) file in the repository.
+This project is licensed under the MIT License. This license allows you to use, share, modify, and distribute the software as long as you include the original license and copyright notice in your copies.
 
 The MIT License is a permissive license that is short and to the point. It lets people do anything they want with your code as long as they provide attribution back to you and don’t hold you liable.
