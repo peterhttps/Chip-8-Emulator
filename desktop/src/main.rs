@@ -47,7 +47,6 @@ fn main() {
     let volume = 0.10;
 
     let device: AudioDevice<SquareWave> = audio_subsystem.open_playback(None, &desired_spec, |spec| {
-        // Calculate the phase increment for generating the square wave
         SquareWave {
             phase_inc: beep_frequency * 2.0 * std::f32::consts::PI / spec.freq as f32,
             phase: 0.0,
@@ -163,7 +162,6 @@ impl AudioCallback for SquareWave {
     type Channel = f32;
 
     fn callback(&mut self, out: &mut [f32]) {
-        // Generate a square wave
         for x in out.iter_mut() {
             *x = if self.phase.sin() >= 0.0 { self.volume } else { -self.volume };
             self.phase = (self.phase + self.phase_inc) % std::f32::consts::PI * 2.0;
